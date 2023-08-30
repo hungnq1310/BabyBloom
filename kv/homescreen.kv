@@ -1,0 +1,68 @@
+#:import utils kivy.utils
+<HomeScreen>
+    FloatLayout:
+        GridLayout:
+            
+            rows:1
+            pos_hint: {"y":0.85}
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex('#9639fa')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+    #top
+        GridLayout:
+            
+            rows:1
+            size_hint: 0.05, 0.05
+            pos_hint: {"y":0.9, "x":0.07}
+            
+            ImageButton:
+                source: 'pic\settings.png'
+                on_release:
+                    print('settings')
+        GridLayout:
+            rows:1
+            size_hint: 0.05, 0.05
+            pos_hint: {"y":0.9, "x":0.8}
+            ImageButton:
+                source: 'pic\more.png'
+                on_release:
+                    print('more')
+        GridLayout:
+            rows:1
+            size_hint: 0.2, 0.2
+            pos_hint: {"y":0.85, "x":0.4}
+            Image:
+                source: 'pic\logo.png'
+                
+    #mid
+    #bottom
+        GridLayout:
+            rows: 1
+            pos_hint: {'top': 0.2, 'left':  1}
+            size_hint: 1, 0.2
+            Button:
+                text: "func1"
+                background_color: 0.1, 0.7, 0.6, 1
+                size_hint: 0.2, 0.2
+            Button:
+                text: "func2"
+                background_color: 0.1, 0.7, 0.6, 1
+                size_hint: 0.2, 0.2
+                on_press: app.change_screen("care_screen")
+            Button:
+                text: "func3"
+                background_color: 0.1, 0.7, 0.6, 1
+                size_hint: 0.2, 0.2
+            Button:
+                text: "func4"
+                background_color: 0.1, 0.7, 0.6, 1
+                size_hint: 0.2, 0.2
+            Button:
+                text: "func5"
+                background_color: 0.1, 0.7, 0.6, 1
+                size_hint: 0.2, 0.2
+                
